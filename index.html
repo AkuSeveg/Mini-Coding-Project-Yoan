@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Produktivitas</title>
+    <!-- Memanggil langsung file style.css di folder yang sama -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
+    <div class="app-container">
+        <header>
+            <div class="header-controls">
+                <button id="theme-toggle" class="glass-btn" title="Ganti Tema">🌓</button>
+                <input type="text" id="name-input" class="glass-input text-right" placeholder="Nama Panggilan" title="Ubah Namamu">
+            </div>
+            <div class="greeting-area glass-card">
+                <h1 id="clock-display">00:00</h1>
+                <p id="date-display">Senin, 1 Januari</p>
+                <h2 id="greeting-text">Selamat datang!</h2>
+            </div>
+        </header>
+
+        <main>
+            <section class="card glass-card" id="timer-section">
+                <h3>⏳ Fokus Timer</h3>
+                <div class="timer-display" id="timer-countdown">25:00</div>
+                <div class="timer-controls">
+                    <button id="btn-start" class="btn-primary glass-btn">Mulai</button>
+                    <button id="btn-pause" class="btn-secondary glass-btn">Jeda</button>
+                    <button id="btn-reset" class="btn-danger glass-btn">Reset</button>
+                </div>
+                <div class="timer-settings">
+                    <label for="duration-input">Set Durasi (menit):</label>
+                    <input type="number" id="duration-input" class="glass-input" min="1" max="120" value="25">
+                </div>
+            </section>
+
+            <section class="card glass-card" id="links-section">
+                <h3>🔗 Tautan Cepat</h3>
+                <form id="link-form" class="input-group">
+                    <input type="text" id="link-name" class="glass-input" placeholder="Nama Situs" required>
+                    <input type="text" id="link-url" class="glass-input" placeholder="google.com" required>
+                    <button type="submit" class="btn-primary glass-btn">Simpan</button>
+                </form>
+                <div id="links-container" class="links-grid"></div>
+            </section>
+
+            <section class="card glass-card" id="todo-section">
+                <h3>📝 Daftar Tugas</h3>
+                <form id="todo-form" class="input-group">
+                    <input type="text" id="todo-input" class="glass-input" placeholder="Tugas baru untuk hari ini..." required>
+                    <button type="submit" class="btn-primary glass-btn">Tambah</button>
+                </form>
+                <ul id="todo-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Memanggil langsung file script.js di folder yang sama -->
+    <script src="script.js"></script>
+</body>
+                  </html>
